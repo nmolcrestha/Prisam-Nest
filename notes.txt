@@ -1,0 +1,8 @@
+TO migrate
+npx prisma migrate dev --create-only
+
+Start app
+npm run start:dev to start nest app
+docker-compose up to start docker and DB
+npx prisma studio to only view DB
+
