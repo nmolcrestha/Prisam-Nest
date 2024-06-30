@@ -13,17 +13,17 @@ export class AuthController {
   }
 
   @Post('/local/signin')
-  signInLocal() {
-    this.authService.signInLocal();
+  signInLocal(@Body() dto: AuthDto): Promise<Tokens> {
+    return this.authService.signInLocal(dto);
   }
 
   @Post('/logout')
   logout() {
-    this.authService.logout();
+    return this.authService.logout();
   }
 
   @Post('/refresh')
   refresh() {
-    this.authService.refresh();
+    return this.authService.refresh();
   }
 }
